@@ -6,7 +6,7 @@ body{
 body {
   display: flex;
   flex-direction: column;
-  color: #505050;
+  color: $text50;
   font-size: 14px;
   line-height: 1.4;
   font-style: normal;
@@ -35,5 +35,10 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.focus:focus {
+  box-shadow: 0px 0px 0px 3px #EFF6E7;
+  border-radius: 3px;
 }
 
