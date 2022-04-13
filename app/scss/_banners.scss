@@ -1,0 +1,50 @@
+.banners {
+  padding-bottom: 72px;
+  &__list{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    max-width: 300px;
+    width: 100%;
+    padding: 76px 0 79px 32px;
+    @extend %bg;
+    @extend %opensans-700;
+    color: $text50;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    &--big {
+      max-width: 630px;
+      width: 100%;
+      color: $white;
+    }
+  }
+  &__title {
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  &__info {
+    @extend %ruda-700;
+    font-size: 30px;
+    line-height: 1.4;
+    max-width: 160px;
+    width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+    &--big {
+      max-width: 370px;
+    }
+  }
+  &__link {
+    font-size: 14px;
+    line-height: 1;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #505050;
+    &--big {
+      border-bottom: 2px solid #fff;
+    }
+  }
+}

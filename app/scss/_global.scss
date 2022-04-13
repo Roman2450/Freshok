@@ -11,7 +11,15 @@ body {
   line-height: 1.4;
   font-style: normal;
   @extend %opensans-400;
-  
+  background-color: #fff;
+}
+
+.title {
+  @extend %ruda-600;
+  font-size: 32px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $text12;
 }
 
 .main{
@@ -40,5 +48,32 @@ body {
 .focus:focus {
   box-shadow: 0px 0px 0px 3px #EFF6E7;
   border-radius: 3px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categorys {
+  display: flex;
+  @extend %opensans-700;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-bottom: 46px;
+}
+
+.category:not(:last-child) {
+  margin-right: 25px;
+}
+
+.category-btn {
+  letter-spacing: 0.03em;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  transition: color 0.5s;
+  padding: 0;
 }
 

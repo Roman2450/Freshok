@@ -1,0 +1,177 @@
+.header {
+  &__top {
+    background-color: $dark-800;
+  }
+
+  &__top-inner {
+    @extend %opensans-700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    color: $white;
+    padding: 17px 0 15px;
+  }
+
+  &__top-item {
+    display: flex;
+  }
+
+  &__top-link {
+    display: flex;
+    @extend %bg;
+    position: relative;
+    transition: opacity 0.5s;
+
+    &+.header__top-link {
+      margin-left: 24px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -4px;
+      left: 0;
+      height: 23px;
+    }
+
+    &--delivery {
+      padding-left: 44px;
+      margin-right: 24px;
+
+      &::before {
+        width: 32px;
+        background-image: url(../images/icons/delivery.svg);
+      }
+    }
+
+    &--hotline {
+      padding-left: 34px;
+
+      &::before {
+        width: 22px;
+        background-image: url(../images/icons/hotline.svg);
+      }
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      filter: brightness(0) saturate(100%) invert(98%) sepia(98%) saturate(183%) hue-rotate(25deg) brightness(99%) contrast(88%);
+      box-shadow: none;
+      color: $green-200;
+    }
+  }
+
+  &__bottom {
+    @extend %opensans-600;
+    background-color: $accent;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding: 25px 0 25px;
+  }
+
+  &__logo {
+    margin-right: 24px;
+  }
+
+  &__dropdownmenu {
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    color: $accent;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 15px 0 15px 62px;
+    border-radius: 6px;
+    border: none;
+    margin-right: 30px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-image: url(../images/icons/nav.svg);
+      @extend %bg;
+      width: 25px;
+      height: 17px;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-8px);
+    }
+  }
+
+  &__dropdownmenu-img {
+    height: 4px;
+    width: 8px;
+    margin: 0 18px 0 12px;
+    fill: $accent;
+  }
+
+  &__form {
+    display: flex;
+    margin-right: 46px;
+    max-width: 575px;
+    width: 100%;
+  }
+
+  &__label {
+    position: relative;
+    max-width: 420px;
+    width: 100%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-image: url(../images/icons/search.svg);
+      @extend %bg;
+      height: 20px;
+      width: 20px;
+      left: 13px;
+      top: 16px;
+    }
+  }
+
+  &__input {
+    letter-spacing: 0.03em;
+    color: $dark-800;
+    padding: 15px 13px 15px 50px;
+    outline: transparent;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    width: 100%;
+
+    &::placeholder {
+      color: $dark-800;
+      @extend %opensans-400;
+    }
+  }
+
+  &__search-btn {
+    background-color: $dark-800;
+    border-radius: 0 6px 6px 0;
+    color: $white;
+    border: none;
+    padding: 15px 52px;
+    letter-spacing: 0.03em;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &:active {
+      background-color: $dark-800;
+      color: rgba(255, 255, 255, 0.5);
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 0 6px 6px 0;
+      opacity: 1;
+    }
+  }
+}
